@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import * as selectores from '../../reducers';
 import * as actions from '../../actions';
 import './post.css'
 
-//import Comment from '../comment';
-//import AddComment from '../addComment';
+import Comment from '../comment';
+import AddComment from '../addComment';
 
 const Post = ({
     id,
@@ -22,7 +22,20 @@ const Post = ({
             <p className="karma"> karma: { karma } </p>
         </div>
         <p className="content"> { text } </p>
+        <div className="CommentList">
+            <h4> Comentarios: </h4>
+            <ul>
+                {
+                    commentList.map(
+                        comment => <Comment key={comment.id} id={comment.id} />
+                    )
+                }
+            </ul>
+        </div>
+
+        <AddComment id_post={id}/>
     </li>
+    
 );
 
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import AddPost from '../addPost';
 import Tablero from '../tablero';
-import Post from '../post';
 
 import './App.css';
 

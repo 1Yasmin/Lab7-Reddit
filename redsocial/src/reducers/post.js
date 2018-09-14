@@ -36,7 +36,6 @@ const byId = (state = {}, action) => {
       case types.UPVOTE_UPDATED:{
         const {id} = action.payload;
         const post = state[id];
-        const karma = post.karma;
         return{
           ...state,
           [id]:{
@@ -49,7 +48,6 @@ const byId = (state = {}, action) => {
        case types.DOWNVOTE_UPDATED:{
         const {id} = action.payload;
         const post = state[id];
-        const karma = post.karma;
         return{
           ...state,
           [id]:{

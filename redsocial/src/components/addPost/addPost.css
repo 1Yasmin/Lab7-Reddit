@@ -1,3 +1,6 @@
 .add_form{
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
