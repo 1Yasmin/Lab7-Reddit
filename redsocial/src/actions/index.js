@@ -1,4 +1,4 @@
-import * as types from '../types';
+import * as types from '../Types';
 
 export const addNewComment = (
     id_post,
@@ -13,25 +13,25 @@ export const addNewComment = (
     }
 });
 
-export const updateDownvote = karma => ({
+export const updateDownvote = (id) => ({
     type: types.DOWNVOTE_UPDATED,
     payload: {
-        karma,
+      id,  
     }
 });
 
-export const updateUpvote = karma => ({
+export const updateUpvote = (id) => ({
     type: types.UPVOTE_UPDATED,
     payload: {
-        karma,
+      id,  
     }
 });
 
 export const editPost = (
     id,
-    text,
+    text
 ) => ({
-    type: types.COMMENT_ADDED,
+    type: types.POST_EDITED,
     payload: {
         id,
         text,
